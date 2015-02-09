@@ -4,8 +4,11 @@
     <%= @user.username %>
   </div>
 
-  <div class="col-md-12 yellowtext small-text">
+  <div class="col-md-6 yellowtext small-text text-left">
     <%= @user.email %>
+  </div>
+  <div class="col-md-6 yellowtext small-text text-right">
+    <%= link_to "Edit User", edit_user_registration_path, class: "btn-sm btn-warning"%>
   </div>
 
 

@@ -24,7 +24,7 @@
      
     <% if user_signed_in? %>
     <div class="col-md-2 text-center">
-      <%= link_to "account", edit_user_registration_path, class: "navlink", :style => "text-decoration:none"  %>
+      <%= link_to "account", current_user, class: "navlink", :style => "text-decoration:none"  %>
     </div>
     <div class="col-md-2 text-center">
       <%= link_to "sign out", destroy_user_session_path, :method => :delete, class: "navlink", :style => "text-decoration:none"  %>
