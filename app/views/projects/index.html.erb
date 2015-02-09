@@ -1,0 +1,44 @@
+<div id="spacer"></div>
+<div class="bgcontainer"></div>
+<div class="jumbotron">
+  <% if user_signed_in? %>
+    <h1>Hello, </h1>
+    <p class="yellowtext"><%= current_user.email %> &nbsp; / &nbsp; <%= current_user.username %></p>
+  <% else %>
+    <h1>Please Sign In/Up</h1>
+  <% end %>
+ </div>
+
+ <div class="col-md-12 text-center showtitles">
+    <div class="col-md-3"><h5><span class="glyphicon glyphicon-folder-open projectnav"></span></h5> </div>
+    <div class="col-md-3"><h5><span class="glyphicon glyphicon-eye-open projectnav"></span></h5> </div>
+    <div class="col-md-3"><h5><span class="glyphicon glyphicon-eye-close projectnav"></span></h5> </div>
+    <div class="col-md-3"><h5><span class="glyphicon glyphicon-user projectnav"></span></h5></div>
+    <div class="col-md-3 yellowtext">all projects</div>
+    <div class="col-md-3 yellowtext">views</div>
+    <div class="col-md-3 yellowtext">users watching</div>
+    <div class="col-md-3 yellowtext">manager</div>
+
+
+
+<div class="indexspacer"></div>
+
+<% @projects.each do |project| %>
+ 
+  <div class="text-center">
+    <div class="col-md-12 indexproject"> 
+      
+      <div class="col-md-3">
+        <p><%= link_to project.title, project, class: "indexlinks", :style => "text-decoration:none" %></p>
+      </div>
+
+      <div class="col-md-3"> <%= project.view_count %> </div>
+
+      <div class="col-md-3"> <%= project.watching_users.count %> </div>
+
+      <div class="col-md-3 usernamelist">
+        <p> <%= link_to project.user_username, project.user, class: "indexlinks", :style => "text-decoration:none" %> </p></div>
+
+    </div>
+  </div>
+<% end %>

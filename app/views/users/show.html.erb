@@ -1,0 +1,80 @@
+<div class="container">
+
+  <div class="col-md-12 yellowtext large-text text-">
+    <%= @user.username %>
+  </div>
+
+  <div class="col-md-12 yellowtext small-text">
+    <%= @user.email %>
+  </div>
+
+
+
+  <div class="col-md-12 text-center">
+
+    <div class="indexspacer"><hr></div>
+
+      <div class="col-md-4 yellowtext medium-text text-center">
+      
+        <%= @user.username %>'s Managed Projects
+        <br>
+
+        <br>
+      
+    </div>
+
+        <div class="col-md-4 yellowtext medium-text text-center">
+      
+          <%= @user.username %>'s Watched Projects
+          <br>
+
+          <br>  
+      
+        </div>
+
+    <div class="col-md-4 yellowtext medium-text text-center">
+    
+      <%= @user.username %>'s Contributed Projects
+      <br>
+
+      <br>
+    
+    </div>
+
+      <% @project.each do |project| %>
+
+      <% if project.user == @user %>
+        
+        <div class="col-md-4">
+        
+          <%= link_to project.title, project, class: "indexlinks", :style => "text-decoration:none" %>
+        
+        </div>
+
+      <% end %>
+
+      <% if project.watches.include?(@user) %>
+
+        <div class="col-md-4">
+
+          <%= link_to project.title, project, class: "indexlinks", :style => "text-decoration:none" %>
+
+        </div>
+      
+      <% end %>
+
+      <% if project.contributors.include?(@user) %>
+
+        <div class="col-md-4">
+
+          <%= link_to project.title, project, class: "indexlinks", :style => "text-decoration:none" %>
+
+        </div>
+      
+      <% end %>
+
+      <% end %>
+
+  </div>
+
+</div>

@@ -1,0 +1,10 @@
+<%= form_for [@project, @comment] do |f| %>
+<div class="container">
+  <div class="col-md-6 text-center">
+    <%= f.text_field :body, class: "form-control newcomment" %>
+  </div>
+  <div class="col-md-1">
+    <%= f.submit class: "btn btn-warning newcomment" %>
+  </div>
+</div>
+<% end %>

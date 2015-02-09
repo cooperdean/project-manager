@@ -1,0 +1,43 @@
+<%= form_for(@project) do |f| %>
+  <% if @project.errors.any? %>
+      <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+      <ul>
+      <% @project.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+      
+  <% end %>
+
+<div class="container">
+  <div class="col-md-8">
+    <div class="col-md-8">
+        <%= f.label :title %><br>
+        <%= f.text_field :title, class: "form-control" %>
+      </div>
+      <div class="col-md-8">
+        <%= f.label :description %><br>
+        <%= f.text_area :description, class: "form-control" %>
+      </div>
+      <div class="col-md-7">
+        <%= f.label :start_date %><br>
+        <%= f.datetime_select :start_date, class: "form-control" %>
+      </div>
+      <div class="col-md-7">
+        <%= f.label :due_date %><br>
+        <%= f.datetime_select :due_date, class: "form-control" %>
+      </div>
+      <div class="col-md-6">
+        <br />
+        <%= f.submit class: "btn btn-warning" %>
+    </div>
+ </div>
+
+   <div class="col-md-2" id="contributor-adder">
+    <%= f.collection_check_boxes :contributor_ids, User.all, :id, :username %>
+  </div>
+
+
+<% end %>
+</div>

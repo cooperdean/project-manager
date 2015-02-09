@@ -1,0 +1,282 @@
+body {
+  background: url("desert.jpg") fixed no-repeat white;
+}
+
+.form-control:focus {
+  border-color: #FBC93D;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.0), 0 0 8px rgba(255, 0, 0, 0.2);
+}
+
+.header {
+  height: 150px;
+  width: 100%;
+  /*box-shadow: 0px -16px 30px 27px rgba(0, 0, 0, 0.62);*/
+}
+
+.yellowtext {
+  color: #FBC93D;
+}
+
+.whitetext {
+  color: white;
+}
+
+.large-text {
+  font-size: 36px;
+  font-weight: lighter;
+}
+
+.medium-text {
+  font-size: 24px;
+  font-weight: lighter;
+}
+
+.small-text {
+  font-size: 14px;
+  font-weight: lighter;
+}
+
+#logo {
+  height: 150px;
+}
+
+.circle {
+  position: absolute;
+  z-index: 1;
+  padding-left: 810px;
+}
+
+#circletext {
+  position: absolute;
+  z-index: 2;
+  padding-left: 845px;
+  padding-top: 40px;
+  font-size: 75px;
+  font-weight: lighter;
+}
+
+.circletextmessage {
+  font-size: 20px;
+  padding-left: 23px;
+  position: absolute;
+  bottom: 1px;
+}
+
+.signlogo {
+  padding-left: 50px;
+  margin-top: -150px;
+  margin-bottom: 75px;
+}
+
+.spacer {
+  height: 30px;
+  width: 100%;
+}
+
+.indexspacer {
+  height: 100px;
+  width: 100%;
+  font-size: 12px;
+  color: #1C1C1C;
+}
+
+#signvideo {
+  position: relative;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+#videooverlay {
+  position: absolute;
+  z-index: 1;
+  color: white;
+  text-decoration: none;
+  margin-top: 150px;
+}
+
+#videocontainer {
+  position: relative;
+  margin: 0 auto;
+}
+
+.navlink {
+  letter-spacing: -1px;
+  position: relative;
+  top: 60px;
+  text-decoration: none;
+  font-size: 14px;
+  color: #FBC93D;
+  transition: 0.3s;
+}
+
+.indexproject {
+  height: 75px;
+  color: white;
+}
+
+.usernamelist {
+  padding-left: 36px;
+}
+
+.indexlinks {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.showlinks {
+  text-decoration: none;
+  color: #FBC93D;
+  font-size: 24px;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.editlinks {
+  padding-left: 100px;
+}
+
+#contributor-adder {
+  font-size: 18px;
+  white-space: pre-line;
+  color: white;
+  overflow: scroll;
+  height: 300px;
+}
+
+.jumbotron {
+  background: url("transparent.png");
+  padding-left: 150px;
+  color: white;
+}
+
+#videooverlay a {
+  color: white;
+  text-decoration: none;
+}
+
+.showtitles {
+  margin-top: -30px;
+  margin-bottom: 30px;
+  font-weight: lighter;
+  color: white;
+}
+
+#showdesc {
+  padding-top: 45px;
+  height: 400px;
+  margin-bottom: 100px;
+  color: white;
+  overflow: scroll;
+}
+
+#showmembers {
+  font-size: 24px;
+  font-weight: lighter;
+  padding-left: 80px;
+  white-space: pre-wrap;
+  overflow: scroll;
+  height: 400px;
+}
+
+#taskdiv {
+  margin-top: 30px;
+  color: white;
+}
+.taskform {
+  display: none;
+  margin-left: 30px;
+  margin-top: 5px;
+}
+
+.signbutton {
+  margin-top: 10px;
+}
+
+.tasklist {
+  margin-left: 100px;
+  height: 400px;
+  overflow: scroll;
+  color: white;
+}
+
+.completed-tasklist {
+  height: 400px;
+  overflow: scroll;
+  color: white;
+  margin-top: 70px;
+}
+
+.disscusionlist {
+  display: none;
+  color: white;
+  margin-left: 100px;
+  height: 400px;
+  overflow: scroll;
+}
+
+#starttext {
+  color: #FBC93D;
+}
+
+#duetext {
+  color: #FBC93D;
+}
+
+#createtask {
+  transition: 0.3s;
+  margin-top: 3px;
+  margin-left: -20px;
+}
+
+.newcomment {
+  display: none;
+  margin-left: 30px;
+  margin-top: 5px;
+}
+
+#menubar {
+  transition: 0.5s;
+  margin-top: -13px;
+  margin-left: -20px;
+}
+
+#menudiscussion {
+  margin-left: -20px;
+  clear: both;
+  transition: 0.3s;
+}
+
+#menutask {
+  margin-left: -20px;
+  clear: both;
+  transition: 0.3s;
+}
+
+.usersemail {
+  letter-spacing: 2px;
+  color: #FBC93D;
+  font-size: 10px;
+}
+
+.commenttime {
+  color: white;
+  font-size: 10px;
+}
+
+#bgcontainer {
+  background: url(gradientbg.jpg) no-repeat fixed white;
+}
+
+.newproject {
+  font-weight: lighter;
+  padding-left: 64px;
+}
+
+.edituser {
+  font-weight: lighter;
+}

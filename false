@@ -1,0 +1,2 @@
+      invoke  active_record
+      remove    db/migrate/20150207200812_add_completion_to_tasks.rb

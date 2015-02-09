@@ -1,0 +1,10 @@
+<%= form_for [@project, @task] do |f| %>
+<div class="container">
+  <div class="col-md-6 text-center">
+    <%= f.text_field :description, class: "form-control taskform" %>
+  </div>
+  <div class="col-md-1">
+    <%= f.submit class: "btn btn-warning taskform" %>
+  </div>
+</div>
+<% end %>
