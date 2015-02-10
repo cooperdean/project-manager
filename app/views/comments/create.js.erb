@@ -1,0 +1,8 @@
+<% if @comment.errors.any? %>
+  $(".newcomment").html("<%= j render "/comments/form" %>");
+<% else %>
+  $(".disscusionlist").prepend("<%= j render partial: '/comments/comment', locals: {comment: @comment} %>");
+  <% @comment = Comment.new %>
+  $(".newcomment").html("<%= j render "/comments/form" %>");
+  $("#comment_body").val("");
+<% end %>

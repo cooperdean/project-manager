@@ -8,11 +8,15 @@ def create
     @comment.project = @project
     @comment.user = current_user
     @comment.save
+    respond_to do |format|
     if @comment.save
-      redirect_to @project, notice: "Comment Added!"
-    else
-      redirect_to @project, notice: "Comment body empty..."
+        format.html { redirect_to @project, notice: "comment saved" }
+        format.js   { render }
+      else
+        format.html { render "projects/show" }
+        format.js   { render }
     end
+  end
 end
 
 def destroy

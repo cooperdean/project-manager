@@ -1,0 +1,33 @@
+<div id="<%= dom_id(task) %>">
+
+        <div class="col-md-12 text-left">
+            <% if task.completion == false %>
+                
+                  <div class="indtask">
+                    <div class="col-md-12">
+                      <%= task.description %>
+                    </div>
+                  </div>
+                  <br> 
+                  <br>
+                  <div class="col-md-12 text-right commenttime">
+                    created by: &nbsp; <%= task.user_username %>
+                  </div>
+                  <div class="col-md-12 text-right usersemail">
+                    <%= task.user_email %>
+                  </div>
+                  <div class="col-md-12 text-right commenttime">
+                    <%= task.created_at.to_formatted_s(:long) %>
+                  </div>
+                  <%= link_to "Done", toggle_task_path(task), method: :patch, class: "btn-sm btn-warning" %>
+
+                  <div class="col-sm-12">
+                    <hr>
+                  </div>
+
+                
+            <% end %>
+        </div>
+
+
+</div>

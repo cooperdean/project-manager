@@ -1,0 +1,19 @@
+<div id="<%= dom_id(comment) %>">
+
+    <div class="col-md-12 text-left">
+        <hr>
+        <%= comment.body %>
+        <br> 
+        <br> 
+      <div class="col-sm-12 text-right commenttime">
+        @ <%= comment.user_name %>
+      </div>
+      <div class="col-sm-12 text-right usersemail">
+        <%= comment.user_email %>
+      </div>
+      <div class="col-sm-12 text-right commenttime">
+        <%= comment.created_at.to_formatted_s(:long) %>
+      </div>
+    </div>
+
+</div>

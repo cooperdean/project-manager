@@ -199,13 +199,13 @@ body {
 
 .tasklist {
   margin-left: 100px;
-  height: 400px;
+  height: 600px;
   overflow: scroll;
   color: white;
 }
 
 .completed-tasklist {
-  height: 400px;
+  height: 600px;
   overflow: scroll;
   color: white;
   margin-top: 70px;
@@ -215,7 +215,7 @@ body {
   display: none;
   color: white;
   margin-left: 100px;
-  height: 400px;
+  height: 600px;
   overflow: scroll;
 }
 

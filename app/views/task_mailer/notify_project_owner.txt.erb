@@ -1,11 +1,15 @@
-Hello <%= @reciever.user_username %>,
+Hello <%= @task.project.user_username %>
 
-=====================================
+===========================================
 
-A task was posted in one of your projects!
+A task was completed by a contributor in one of your projects!
 
-Project: <%= @project.title %>
+<%= @task.user_username %> completed this task : 
 
-Task: <%= @task.description %>
+<%= @task.description %>
+  
+in this project:
+
+<%= @task.project.title %>
 
 Regards, Blunderbuss Management

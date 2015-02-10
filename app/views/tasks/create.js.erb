@@ -1,0 +1,8 @@
+<% if @task.errors.any? %>
+  $(".taskform").html("<%= j render "/tasks/form" %>");
+<% else %>
+  $(".tasklist").prepend("<%= j render partial: '/tasks/task', locals: {task: @task} %>");
+  <% @task = Task.new %>
+  $(".taskform").html("<%= j render "/tasks/form" %>");
+  $("#task_description").val("");
+<% end %>
