@@ -15,8 +15,6 @@ gem 'devise'
 
 gem 'friendly_id', '~> 5.1.0'
 
-gem "simple_form"
-
 group :development, :test do
   gem 'letter_opener'
   gem 'byebug'

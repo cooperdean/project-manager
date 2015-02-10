@@ -11,7 +11,7 @@
 
     <div class="header">
      
-       <div class="col-md-3 text-center" id="logo">
+       <div class="col-md-4 text-center" id="logo">
           <%= image_tag("blunderbuss.png") %>
     </div>
 
@@ -32,18 +32,9 @@
       <%= link_to "sign out", destroy_user_session_path, :method => :delete, class: "navlink", :style => "text-decoration:none"  %>
     </div>
 
-    <% else %>
-    <div class="col-md-2 text-center">
-      <%= link_to "sign in", new_user_session_path, class: "navlink" %>
-    </div>
-
-      <div class="col-md-2 text-center">
-        <%= link_to "sign up", new_user_registration_path, class: "navlink"%>
-      </div>
-
      <% end %>
-     
-      <div class="col-md-2 text-center">
+
+      <div class="col-md-1 text-center">
          <%= link_to "about", about_path, class: "navlink", :style => "text-decoration:none" %>
       </div>
 

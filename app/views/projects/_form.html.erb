@@ -1,14 +1,4 @@
-<%= form_for(@project) do |f| %>
-  <% if @project.errors.any? %>
-      <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
-
-      <ul>
-      <% @project.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-      
-  <% end %>
+<%= simple_form_for(@project) do |f| %>
 
 <div class="container">
   <div class="col-md-8">
@@ -34,10 +24,14 @@
     </div>
  </div>
 
-   <div class="col-md-2" id="contributor-adder">
-    <%= f.collection_check_boxes :contributor_ids, User.all, :id, :username %>
+   <div class="col-md-4" id="contributor-adder">
+
+    <%= f.collection_check_boxes :contributor_ids, User.all, :id, :username, checked: User.all.map(&:id) do |b| %>
+  <div class="col-md-12">
+    <%= b.check_box %> &nbsp; <%= b.label %>
   </div>
-
-
+  <% end %>
+</div>
 <% end %>
+
 </div>

@@ -2,9 +2,7 @@ body {
   background: url("desert.jpg") fixed no-repeat white;
 }
 
-.coop {
-  border-radius: 50%;
-}
+
 
 .form-control:focus {
   border-color: #FBC93D;
@@ -17,6 +15,9 @@ body {
   /*box-shadow: 0px -16px 30px 27px rgba(0, 0, 0, 0.62);*/
 }
 
+.coop {
+  border-radius: 50%;
+}
 .yellowtext {
   color: #FBC93D;
 }
@@ -145,11 +146,12 @@ body {
 }
 
 #contributor-adder {
+  margin-top: -100px;
   font-size: 18px;
   white-space: pre-line;
   color: white;
-  overflow: scroll;
-  height: 300px;
+  overflow: visible;
+  height: 400px;
 }
 
 .jumbotron {
@@ -283,4 +285,8 @@ body {
 
 .edituser {
   font-weight: lighter;
+}
+
+.checkbox_container input {
+  display: inline;
 }
