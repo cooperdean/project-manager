@@ -2,6 +2,10 @@ body {
   background: url("desert.jpg") fixed no-repeat white;
 }
 
+.coop {
+  border-radius: 50%;
+}
+
 .form-control:focus {
   border-color: #FBC93D;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.0), 0 0 8px rgba(255, 0, 0, 0.2);

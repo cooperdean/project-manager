@@ -1,12 +1,14 @@
 Rails.application.routes.draw do
 
-  resources :watches
+  get 'about/index' => "about#index", as: :about
 
   get 'users/show'
 
   resources :comments
 
   resources :tasks
+
+  resources :watches
 
   devise_for :users
   get 'users/:id' => 'users#show', as: :user
