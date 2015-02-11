@@ -111,7 +111,6 @@ $('#menutask').on('click', function () {
 
 // PROGRESSION BAR MATH
 
-
 var tasktotal = ($('.indtask').size())+($('.indtask-done').size());
 var progression = (($('.indtask-done').size()) / tasktotal)*100 || 0;
 
