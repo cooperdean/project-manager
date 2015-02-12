@@ -22,7 +22,7 @@ end
 def update
   @task = Task.find(params[:id])
   @task.user = current_user
-  TaskMailer.notify_project_owner(@task).deliver
+  # TaskMailer.notify_project_owner(@task).deliver
   if @task.update_attribute(:completion, params[:completion])
     redirect_to @task.project
   end
