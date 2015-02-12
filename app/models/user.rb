@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
   has_many :comments, through: :projects
 
   has_many :contributions, dependent: :destroy
-  has_many :contributed_projects, through: :contributions, source: :projects
+  has_many :contributed_projects, through: :contributions, source: :project
 
   has_many :watches, dependent: :destroy
   has_many :watched_projects, through: :watches, source: :project

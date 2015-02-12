@@ -47,39 +47,42 @@
     
     </div>
 
-      <% @project.each do |project| %>
-
-      <% if project.user == @user %>
-        
-        <div class="col-md-4">
-        
-          <%= link_to project.title, project, class: "indexlinks", :style => "text-decoration:none" %>
-        
-        </div>
-
-      <% end %>
-
-      <% if project.watches.include?(@user) %>
-
-        <div class="col-md-4">
-
-          <%= link_to project.title, project, class: "indexlinks", :style => "text-decoration:none" %>
-
-        </div>
       
-      <% end %>
+    <div class="col-md-4">
+      <% @user.projects.each do |p| %>
 
-      <% if project.contributors.include?(@user) %>
+        <div class="col-md-12">
 
-        <div class="col-md-4">
-
-          <%= link_to project.title, project, class: "indexlinks", :style => "text-decoration:none" %>
+          <%= link_to p.title, p, class: "indexlinks", :style => "text-decoration:none" %>
 
         </div>
-      
-      <% end %>
 
       <% end %>
+    </div>
+
+<div class="col-md-4">
+      <% @watches.each do |w| %>
+
+        <div class="col-md-12">
+        
+          <%= link_to w.title, w, class: "indexlinks", :style => "text-decoration:none" %>
+        
+        </div>
+
+      <% end %>
+</div>
+
+<div class="col-md-4">
+      <% @contributors.each do |c| %>
+
+        <div class="col-md-12">
+
+          <%= link_to c.title, c, class: "indexlinks", :style => "text-decoration:none" %>
+
+        </div>
+
+      <% end %>
+</div>
 
   </div>
 
