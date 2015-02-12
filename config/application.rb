@@ -25,9 +25,6 @@ module ProjectManagerTool
     
     config.assets.initialize_on_precompile = false
 
-    config.assets.precompile += [
-      'desert.jpg'
-      'transparent.png'
-    ]
+    config.assets.compile = true
   end
 end
