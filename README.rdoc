@@ -1,5 +1,5 @@
 == My first Rails app!
 === Blunderbuss Project Manager
-==== Deployed to Heroku
+====== Deployed to Heroku
 
 https://rocky-basin-6886.herokuapp.com/
