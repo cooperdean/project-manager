@@ -25,8 +25,5 @@ module ProjectManagerTool
     
     config.assets.initialize_on_precompile = false
 
-    config.assets.compile = true
-
-    config.serve_static_assets = true
   end
 end
