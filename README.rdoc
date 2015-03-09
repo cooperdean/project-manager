@@ -2,4 +2,4 @@
 === Blunderbuss Project Manager
 ====== Deployed to Heroku
 
-https://rocky-basin-6886.herokuapp.com/
+https://blunderbuss.herokuapp.com/
